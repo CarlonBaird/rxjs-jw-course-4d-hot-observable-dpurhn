@@ -12,6 +12,9 @@ helloClick$.subscribe((event) =>
   console.log('Sub 1:', event.type, event.x, event.y)
 );
 
-helloClick$.subscribe((event) =>
-  console.log('Sub 2:', event.type, event.x, event.y)
-);
+setTimeout(() => {
+  console.log('Subscription 2 starts');
+  helloClick$.subscribe((event) =>
+    console.log('Sub 2:', event.type, event.x, event.y)
+  );
+}, 5000);
